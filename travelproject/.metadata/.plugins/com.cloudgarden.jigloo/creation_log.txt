@@ -1,0 +1,30 @@
+Creating elements for JourneyDetails.java
+
+
+>>>  about to create class com.persistence.DataBaseLogic, constructor=public com.persistence.DataBaseLogic()
+<<< created class com.persistence.DataBaseLogic
+
+>>>  about to create class javax.swing.JFrame, constructor=public javax.swing.JFrame() throws java.awt.HeadlessException
+<<< created class javax.swing.JFrame
+
+>>>  about to create class javax.swing.JLabel, constructor=public javax.swing.JLabel()
+<<< created class javax.swing.JLabel
+
+>>>  about to create class javax.swing.JLabel, constructor=public javax.swing.JLabel()
+<<< created class javax.swing.JLabel
+
+>>>  about to create class javax.swing.JTextField, constructor=public javax.swing.JTextField()
+<<< created class javax.swing.JTextField
+
+>>>  about to create class javax.swing.JButton, constructor=public javax.swing.JButton()
+<<< created class javax.swing.JButton
+
+>>>  about to create class javax.swing.JLabel, constructor=public javax.swing.JLabel()
+<<< created class javax.swing.JLabel
+
+>>>  about to create class javax.swing.JList, constructor=public javax.swing.JList()
+<<< created class javax.swing.JList
+
+>>>  about to create class javax.swing.DefaultComboBoxModel, constructor=public javax.swing.DefaultComboBoxModel(java.lang.Object[])
+<<< error trying to make class javax.swing.DefaultComboBoxModel, java.lang.reflect.InvocationTargetException
+<<< error creating class javax.swing.DefaultComboBoxModel, java.lang.reflect.InvocationTargetException

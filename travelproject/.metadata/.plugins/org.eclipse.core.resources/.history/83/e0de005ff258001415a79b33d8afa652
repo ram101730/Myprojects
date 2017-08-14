@@ -1,0 +1,72 @@
+package com.model;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+
+import javax.swing.WindowConstants;
+import javax.swing.SwingUtilities;
+
+
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
+public class BusLocation extends javax.swing.JFrame {
+	private JLabel buslocationlabel;
+	private JComboBox station;
+
+	/**
+	* Auto-generated main method to display this JFrame
+	*/
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				BusLocation inst = new BusLocation();
+				inst.setLocationRelativeTo(null);
+				inst.setVisible(true);
+			}
+		});
+	}
+	
+	public BusLocation() {
+		super();
+		initGUI();
+	}
+	
+	private void initGUI() {
+		try {
+			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			getContentPane().setLayout(null);
+			{
+				buslocationlabel = new JLabel();
+				getContentPane().add(buslocationlabel);
+				buslocationlabel.setText("Bus Location");
+				buslocationlabel.setBounds(82, 53, 70, 17);
+			}
+			{
+				ComboBoxModel stationModel = 
+					new DefaultComboBoxModel(
+							new String[] { "Item One", "Item Two" });
+				station = new JComboBox();
+				getContentPane().add(station);
+				station.setModel(stationModel);
+				station.setBounds(164, 51, 113, 21);
+			}
+			pack();
+			setSize(400, 300);
+		} catch (Exception e) {
+		    //add your error handling code here
+			e.printStackTrace();
+		}
+	}
+
+}

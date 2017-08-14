@@ -1,0 +1,121 @@
+package com.model;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import javax.swing.WindowConstants;
+import javax.swing.SwingUtilities;
+
+
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
+public class BusRegistration extends javax.swing.JFrame {
+	private JComboBox bustype;
+	private JButton backbutton;
+	private JButton submit;
+	private JLabel busnumlabel;
+	private JTextField busnum;
+	private JLabel bustypelabel;
+	Connection con=null;
+	Statement st=null;
+	ResultSet rs=null;
+
+	/**
+	* Auto-generated main method to display this JFrame
+	*/
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				BusRegistration inst = new BusRegistration();
+				inst.setLocationRelativeTo(null);
+				inst.setVisible(true);
+			}
+		});
+	}
+	
+	public BusRegistration() {
+		super();
+		initGUI();
+	}
+	
+	private void initGUI() {
+		try {
+		
+			con=com.persistence.ConnectionFactory.getConnection();
+			st=con.createStatement();
+			String s="select * from BUSTYPE";
+			rs=st.executeQuery(s);
+			ArrayList al=new ArrayList();
+			while(rs.next())
+			{
+				
+				
+			}
+			
+			
+			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			getContentPane().setLayout(null);
+			{				ComboBoxModel bustypeModel = 
+					new DefaultComboBoxModel(
+							new String[] { "Item One", "Item Two" });
+				bustype = new JComboBox();
+				getContentPane().add(bustype);
+				bustype.setModel(bustypeModel);
+				bustype.setBounds(215, 128, 136, 21);
+			}
+			{
+				bustypelabel = new JLabel();
+				getContentPane().add(bustypelabel);
+				bustypelabel.setText("Select bus type");
+				bustypelabel.setBounds(70, 128, 74, 14);
+			}
+			{
+				busnum = new JTextField();
+				getContentPane().add(busnum);
+				busnum.setBounds(215, 170, 136, 21);
+			}
+			{
+				busnumlabel = new JLabel();
+				getContentPane().add(busnumlabel);
+				busnumlabel.setText("enter bus number");
+				busnumlabel.setBounds(70, 177, 85, 14);
+			}
+			{
+				submit = new JButton();
+				getContentPane().add(submit);
+				submit.setText("submit");
+				submit.setBounds(108, 233, 83, 21);
+			}
+			{
+				backbutton = new JButton();
+				getContentPane().add(backbutton);
+				backbutton.setText("back");
+				backbutton.setBounds(248, 233, 67, 21);
+			}
+			pack();
+			this.setSize(485, 407);
+		} catch (Exception e) {
+		    //add your error handling code here
+			e.printStackTrace();
+		}
+	}
+
+}

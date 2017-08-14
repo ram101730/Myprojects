@@ -1,0 +1,101 @@
+package com.model;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import javax.swing.WindowConstants;
+import javax.swing.SwingUtilities;
+
+
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
+public class Recharge extends javax.swing.JFrame {
+	private JTextField smartcardid;
+	private JLabel smartcardlabel;
+	private JLabel amountlabel;
+	private JComboBox amount;
+	private JButton getidlabel;
+	private JButton submitbutton;
+
+	/**
+	* Auto-generated main method to display this JFrame
+	*/
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				Recharge inst = new Recharge();
+				inst.setLocationRelativeTo(null);
+				inst.setVisible(true);
+			}
+		});
+	}
+	
+	public Recharge() {
+		super();
+		initGUI();
+	}
+	
+	private void initGUI() {
+		try {
+			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			getContentPane().setLayout(null);
+			{
+				smartcardid = new JTextField();
+				getContentPane().add(smartcardid);
+				smartcardid.setBounds(171, 59, 98, 21);
+			}
+			{
+				smartcardlabel = new JLabel();
+				getContentPane().add(smartcardlabel);
+				smartcardlabel.setText("Smart Card ID");
+				smartcardlabel.setBounds(69, 66, 68, 14);
+			}
+			{
+				amountlabel = new JLabel();
+				getContentPane().add(amountlabel);
+				amountlabel.setText("Amount");
+				amountlabel.setBounds(69, 105, 37, 14);
+			}
+			{
+				submitbutton = new JButton();
+				getContentPane().add(submitbutton);
+				submitbutton.setText("Submit");
+				submitbutton.setBounds(131, 165, 46, 21);
+			}
+			{
+				getidlabel = new JButton();
+				getContentPane().add(getidlabel);
+				getidlabel.setText("Get ID");
+				getidlabel.setBounds(289, 63, 45, 21);
+			}
+			{
+				ComboBoxModel amountModel = 
+					new DefaultComboBoxModel(
+							new String[] { "Item One", "Item Two" });
+				amount = new JComboBox();
+				getContentPane().add(amount);
+				amount.setModel(amountModel);
+				amount.setBounds(171, 102, 98, 21);
+			}
+			pack();
+			setSize(400, 300);
+		} catch (Exception e) {
+		    //add your error handling code here
+			e.printStackTrace();
+		}
+	}
+
+}

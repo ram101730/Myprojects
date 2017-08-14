@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse" version="1.6.0_16">
+<bootpath>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\resources.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\rt.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\sunrsasign.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\jsse.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\jce.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\charsets.jar"/>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="E:\ProjectSoftwares\eclipse-jee-galileo-SR2-win32new\eclipse\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\Java\jdk1.6.0_16" version="1.6.0_16">
+<bootpath>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jdk1.6.0_16\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

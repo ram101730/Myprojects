@@ -1,0 +1,139 @@
+package com.model;
+import java.util.ArrayList;
+
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import javax.swing.WindowConstants;
+import javax.swing.SwingUtilities;
+
+import com.persistence.DataBaseLogic;
+
+
+/**
+* This code was edited or generated using CloudGarden's Jigloo
+* SWT/Swing GUI Builder, which is free for non-commercial
+* use. If Jigloo is being used commercially (ie, by a corporation,
+* company or business for any purpose whatever) then you
+* should purchase a license for each developer using Jigloo.
+* Please visit www.cloudgarden.com for details.
+* Use of Jigloo implies acceptance of these licensing terms.
+* A COMMERCIAL LICENSE HAS NOT BEEN PURCHASED FOR
+* THIS MACHINE, SO JIGLOO OR THIS CODE CANNOT BE USED
+* LEGALLY FOR ANY CORPORATE OR COMMERCIAL PURPOSE.
+*/
+public class BusFerame extends javax.swing.JFrame {
+	private JLabel jLabel1;
+	private JComboBox source;
+	private JLabel jLabel2;
+	private JLabel jLabel3;
+	private JButton jButton1;
+	private JLabel jLabel4;
+	private JTextField jTextField1;
+	private JComboBox destination;
+
+	/**
+	* Auto-generated main method to display this JFrame
+	*/
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				BusFerame inst = new BusFerame();
+				inst.setLocationRelativeTo(null);
+				inst.setVisible(true);
+			}
+		});
+	}
+	
+	public BusFerame() {
+		super();
+		initGUI();
+	}
+	
+	private void initGUI() {
+		try {
+			setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			getContentPane().setLayout(null);
+			getContentPane().setBackground(new java.awt.Color(192,192,192));
+			this.setIconImage(new ImageIcon(getClass().getClassLoader().getResource("10662017_690692531021129_3978543551331245996_o.jpg")).getImage());
+			{
+				jLabel1 = new JLabel();
+				getContentPane().add(jLabel1);
+				jLabel1.setText("Source");
+				jLabel1.setBounds(67, 102, 82, 14);
+				jLabel1.setFont(new java.awt.Font("Tempus Sans ITC",1,14));
+				jLabel1.setBackground(new java.awt.Color(0,0,64));
+			}
+			{
+				
+				DataBaseLogic db=new DataBaseLogic();
+				ArrayList<String> source1=new ArrayList<String>();
+				source1=db.getSource();
+				source1.add(0,"select");
+				
+				
+				
+				ComboBoxModel sourceModel = 
+					new DefaultComboBoxModel(
+							 source1.toArray());
+				source = new JComboBox();
+				getContentPane().add(source);
+				source.setModel(sourceModel);
+				source.setBounds(172, 99, 106, 21);
+			}
+			{
+				jLabel2 = new JLabel();
+				getContentPane().add(jLabel2);
+				jLabel2.setText("Destination");
+				jLabel2.setBounds(67, 146, 92, 14);
+				jLabel2.setFont(new java.awt.Font("Tempus Sans ITC",1,14));
+			}
+			{
+				ComboBoxModel destinationModel = 
+					new DefaultComboBoxModel(
+							new String[] { "Item One", "Item Two" });
+				destination = new JComboBox();
+				getContentPane().add(destination);
+				destination.setModel(destinationModel);
+				destination.setBounds(171, 143, 107, 21);
+			}
+			{
+				jLabel3 = new JLabel();
+				getContentPane().add(jLabel3);
+				jLabel3.setText("Fare");
+				jLabel3.setBounds(67, 196, 82, 14);
+				jLabel3.setFont(new java.awt.Font("Tempus Sans ITC",1,14));
+			}
+			{
+				jTextField1 = new JTextField();
+				getContentPane().add(jTextField1);
+				jTextField1.setBounds(171, 189, 107, 21);
+			}
+			{
+				jButton1 = new JButton();
+				getContentPane().add(jButton1);
+				jButton1.setText("DEDUCT AMOUNT");
+				jButton1.setBounds(154, 268, 156, 21);
+				jButton1.setFont(new java.awt.Font("Times New Roman",1,14));
+			}
+			{
+				jLabel4 = new JLabel();
+				getContentPane().add(jLabel4);
+				jLabel4.setBounds(159, 24, 119, 14);
+				jLabel4.setText("ap28z1234");
+				jLabel4.setFont(new java.awt.Font("Times New Roman",1,18));
+			}
+			pack();
+			this.setSize(403, 437);
+		} catch (Exception e) {
+		    //add your error handling code here
+			e.printStackTrace();
+		}
+	}
+
+}
